@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Salvador Lopez Jr.</title>
+    <link rel="stylesheet" type="text/css" href="portfolio.css"/>
+    <link rel="icon" href="http://example.com/favicon.png">
+</head>
+<body>
+
+<div class="flipContainer">
+	<div class="flipper" id="flip">
+		<div class="front face">
+            <img src="card_front.png" width="50%" alt="BusinessCardFront" class="center shadow" usemap="#navmap"/>
+            <map name="navmap">
+                <div id="undA" onclick="flipToBack(this.id)"><area shape="rect" coords="1480,3255,2330,3480"></div>
+                <div id="undW" onclick="flipToBack(this.id)"><area shape="rect" coords="3144,3255,3860,3480"></div>
+                <div id="undC" onclick="flipToBack(this.id)"><area shape="rect" coords="4614,3255,5740,3480"></div>
+                <div id="test"></div>
+                <div id="square"></div>
+            </map>
+        </div>
+        <div class="back face" usemap="sqmap">
+            <img src="card_back2.png" width="50%" alt="BusinessCardBack" class="center shadow" id="scale"/>
+            <map name="sqmap">
+                <div id="flipArrow" onclick="flipToFront()"><img src="flip_arrow.png" width="6%" alt="ReturnArrow"/></div>
+            </map>
+        </div>
+    </div>
+</div>
+
+<section id="about" style="height:100px; top:80px;">
+    <img src="missing_icon.png" width="50%" alt="MissingFileIcon" class="center"/>
+    <p style="text-align:center; line-height:0;">"areallygoodpicofme.png"</p><br>
+    <p>Hello! My name is Salvador and I am an aspiring Mobile App Developer, as well as a Graphic and Web Designer. To further hone my app developing skills, I am currently attending Laredo College to earn a degree in Mobile-Apps Media and Web Develepment. On my free time I work on small personal projects that range from creating small apps, designing graphics for websites, apps or for enjoyment and occasionally indulge myself in video games. (<i>Purely for inspirational purposes!</i>)</p>
+</section>
+    
+<section id="contact">
+    <form action="mailto:salvalopez@gmail.com" mode="post">
+        <input name="email" type="email" placeholder="Email address">
+        <input name="name" type="text" placeholder="Name">
+        <textarea name="message" cols="30" rows="10" placeholder="Your message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<script src="jquery-3.3.1.js"></script>
+<script type="text/javascript" src="Extra/imageMapResizer.min.js"></script>
+<script src="portfolio.js"></script>
+
+</body>
+</html>
