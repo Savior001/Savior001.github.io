@@ -11,7 +11,8 @@ function flipToBack(id) {
         section = document.getElementById("about");
         section.classList.toggle("sectionIn");
     } else if (id == "undW") {
-        section = "work";
+        section = document.getElementById("work");
+        section.classList.toggle("sectionIn");
     } else if (id == "undC") {
         section = document.getElementById("contact");
         section.classList.toggle("sectionIn");
@@ -27,7 +28,10 @@ function flipToFront() {
         section.classList.remove("sectionIn");
         section.classList.remove("sectionOut");
     } else if (section == "undW") {
-        section = "work";
+        section = document.getElementById("work");
+        section.classList.toggle("sectionOut");
+        section.classList.remove("sectionIn");
+        section.classList.remove("sectionOut");
     } else if (section == "undC") {
         section = document.getElementById("contact");
         section.classList.toggle("sectionOut");
