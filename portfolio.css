@@ -1,0 +1,272 @@
+body {
+    background-color:#f5f5f5;
+    font-family:'Garamond','EB Garamond',
+        'Baskerville', 'Baskerville Old Face',
+        'Hoefler Text', 'Times New Roman',
+        'serif';
+    font-size:20px;
+    overflow-x:hidden;
+}
+
+section {
+    position:relative;
+    margin:auto;
+    width:50%;
+    opacity:0;
+    text-align:justify;
+    line-height:1.4;
+    visibility:hidden;
+}
+
+form {
+    display:block;
+    margin-top:-120px;
+    box-sizing:border-box;
+    overflow:hidden;
+}
+
+h1 {
+    font-family:'Garamond','EB Garamond',
+        'Baskerville', 'Baskerville Old Face',
+        'Hoefler Text', 'Times New Roman',
+        'serif';
+}
+
+input, textarea {
+    display: block;
+    box-sizing:border-box;
+    background-color: #f3f3f3;
+    color: #000;
+    padding: 10px;
+    font-size: 18px;
+    width: 97%;
+    border: 0;
+    margin: 20px 0;
+}
+
+input[name="email"],
+input[name="name"] {
+    display:inline-block;
+    width:48%;
+    margin-bottom:0px;
+}
+
+textarea {
+    resize:vertical;
+}
+
+button {
+    display:block;
+    cursor:pointer;
+    font-size: 18px;
+    background-color:#8245E0;
+    opacity:0.5;
+    color:white;
+    width:97%;
+    padding:10px;
+    border:0;
+    font-family:'Garamond', 'EB Garamond',
+        'Baskerville', 'Baskerville Old Face',
+        'Hoefler Text', 'Times New Roman',
+        'serif';
+    font-weight: bold;
+}
+
+.bodyLock {
+    overflow-y:hidden;
+}
+
+.bodyUnlock {
+    overflow-y:scroll;
+}
+
+.center {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.cardScale {
+    transition:all 0.5s;
+    transform:scale(7);
+}
+
+.cardHide {
+    transition:all 1s;
+    visibility:hidden;
+}
+
+.cardReScale {
+    transition:all 1s;
+    transform:scale(1);
+}
+
+.cardShow {
+    visibility:visible;
+}
+
+.flipContainer {
+    position:relative;
+    margin:auto;
+    width:100%;
+    height:100%;
+    min-width:400px;
+    z-index:1;
+    float:left;
+}
+
+.flipContainer {
+    -webkit-perspective:-1000;
+    perspective:-1000;
+}
+
+.flipped {
+    -webkit-transform:rotateY(-180deg);
+    transform:rotateY(-180deg);
+}
+
+.flipper {
+    width:100%;
+    height:100%;
+     -webkit-transition:all 0.3s linear;
+    transition:all 0.3s linear;
+    -webkit-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+}
+
+.face {
+    position: absolute;
+    width:100%;
+    height:100%;
+}
+
+.front, .back{
+    top:64px;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+}
+
+.front {
+    z-index:2;
+}
+
+.back {
+    -webkit-transform:rotateY(-180deg);
+    transform:rotateY(-180deg);
+}
+
+.shadow {
+    -webkit-filter: drop-shadow( -5px -5px 5px #D3D3D3 ); 
+    filter: drop-shadow( 5px 5px 5px #D3D3D3 );  
+}
+
+.sectionIn {
+    opacity:1;
+    visibility:visible;
+    transition:0.5s;
+    transition-delay:1.6s;
+}
+
+.sectionOut {
+    opacity:0;
+    visibility:hidden;
+    transition:0.15s;
+}
+
+#undA {
+    position:absolute;
+    top:24.1vw;
+    left:-14.5vw;
+    margin-left:50%;
+    width:0;
+    height:0.04vw;
+    background:black;
+    -webkit-transition:0.3s;
+    transition:0.3s;
+}
+
+#undW {
+    position:absolute;
+    top:24.1vw;
+    left:-3.05vw;
+    margin-left:50%;
+    width:0;
+    height:0.04vw;
+    background:black;
+    -webkit-transition:0.3s;
+    transition:0.3s;
+}
+
+#undC {
+    position:absolute;
+    top:24.1vw;
+    left:6.9vw;
+    margin-left:50%;
+    width:0;
+    height:0.04vw;
+    background:black;
+    -webkit-transition:0.3s;
+    transition:0.3s;
+}
+
+#test {
+    position:absolute;
+    top:24.1vw;
+    left:-14.5vw;
+    margin-left:50%;
+    width:0;
+    height:0.04vw;
+    background:red;
+    -webkit-transition:0.3s;
+    transition:0.3s;
+}
+
+#undA:hover {
+    width:5.28vw;
+}
+
+#undW:hover {
+    width:4.5vw;
+}
+
+#undC:hover {
+    width:7.31vw;
+}
+
+#test:hover {
+    width:7.31vw;
+}
+
+#flipArrow {
+    position:absolute;
+    top:1.29vw;
+    left:-0.07vw;
+    margin-left:72%;
+    width:auto;
+    min-width:1.6vw;
+    height:1.6vw;
+    opacity:0.8;
+}
+
+#send {
+    background-color:#8245E0;
+    opacity:0.5;
+    color:white;
+    font-family:'Garamond', 'EB Garamond',
+        'Baskerville', 'Baskerville Old Face',
+        'Hoefler Text', 'Times New Roman',
+        'serif';
+    font-weight: bold;
+}
+
+#square {
+    position:absolute;
+    top:1.29vw;
+    left:-0.07vw;
+    margin-left:72%;
+    width:auto;
+    min-width:1.6vw;
+    height:1.6vw;
+    background:#8245E0;
+    opacity:0;
+}
