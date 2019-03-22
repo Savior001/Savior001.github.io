@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <title>Salvador Lopez Jr.</title>
     <link rel="stylesheet" type="text/css" href="portfolio.css"/>
-    <link rel="icon" href="http://example.com/favicon.png">
+    <link rel="icon" href="favicon.ico">
 </head>
 <body id="body" onload="scrollLock()">
 
@@ -29,28 +29,26 @@
     </div>
 </div>
 
-<section id="about" style="height:100px; top:80px;">
+<section id="about" style="top:80px" class="widthLock">
     <img src="polaroid.png" width="50%" alt="Salvador" class="center"/>
     <p style="text-align:center; line-height:0;">( <i>very stylish!</i> )</p><br>
     <p>Hello! My name is Salvador and I am an aspiring Mobile App Developer. To further hone my app developing skills, I am currently attending Laredo College to earn a degree in Mobile-Apps Media and Web Development. Throughout my time attending school, I have learned to understand the syntax behind a couple of programming languages like Swift, C++, Java and others. There are even a few small project applications I have developed!</p>
     <p>At heart, I feel I am a creator. My interest in art got me into designing graphics. Anything from sketching on paper with lead or ink, to clicking vectors onto the screen of my computer, or a bit of both by scanning my sketches and refining them digitally. Whatever the medium happens to be, it is always rewarding being able to visually see an idea come to fruition. ( <i>it also comes in handy when making sites or apps!</i> )</p>
     <p>And, of course, my passion for designing also swayed me towards web design! Which, as a matter of fact, helped me design this very website portfolio here. (<i> very nifty if I do say so myself! </i>) While tedious at times, web design is very exciting to me!</p>
-    <!--
-    For more paragraphs:
-
-    as well as a Graphic and Web Designer
-
-    On my free time I work on small personal projects that range from creating small apps, designing graphics for websites, apps or for enjoyment and occasionally indulge myself in video games. ( <i>Purely for inspirational purposes!</i> )
-    -->
 </section>
     
-<section id="work" style="height:100px; top:80px;">
+<section id="work" style="top:-30px">
     <p style="text-align:center;">Here are some of the projects I have worked on so far:</p>
     <h1 style="text-align:center;">DESIGNS</h1>
-    <img src="work/collage.png" width="100%" alt="designs collage" id="img"/>
+    <div class="top-left">
+        <p>These are some personal and school projects I designed.</p>
+    </div>
+    <div style="text-align:center">
+        <img src="work/collage.png" width="65%" alt="designs collage"/>
+    </div>
 </section>
 
-<section id="contact">
+<section id="contact" style="top:-130px" class="widthLock">
     <form action="mailto:salvalopez95@gmail.com" method="post" enctype="text/plain">
         <input name="email" type="text" placeholder="Email address">
         <input name="name" type="text" placeholder="Name">
@@ -60,7 +58,7 @@
 </section>
 
 <script src="jquery-3.3.1.js"></script>
-<script type="text/javascript" src="imageMapResizer.min.js"></script>
+<script type="text/javascript" src="extra/imageMapResizer.min.js"></script>
 <script src="portfolio.js"></script>
 
 </body>
