@@ -87,6 +87,16 @@ function flipTo() {
     section = "";
 }
 
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+});
+
+$('#flipArrow').click(function(event) {
+  if(!event.detail || event.detail == 1){//activate on first click only to avoid hiding again on multiple clicks
+    flipToFront(); // It will execute only once on multiple clicks
+  }
+});
+
 $(document).ready(function() {
     $("#bgColor").one("mouseover", function() {
         $("#bgColor body").addClass('bgColorWhite');
@@ -96,6 +106,3 @@ $(document).ready(function() {
 });
 
 $('map').imageMapResize();
-
-/*<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="salvador_script.js"></script>*/
