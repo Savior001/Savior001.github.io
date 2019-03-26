@@ -234,18 +234,6 @@ button {
     transition:0.3s;
 }
 
-#test {
-    position:absolute;
-    top:24.1vw;
-    left:-14.5vw;
-    margin-left:50%;
-    width:0;
-    height:0.04vw;
-    background:red;
-    -webkit-transition:0.3s;
-    transition:0.3s;
-}
-
 #undA:hover {
     width:5.28vw;
 }
