@@ -22,7 +22,8 @@ body {
         'serif';
     font-size:20px;
     overflow-x:hidden;
-    min-width:1%;
+    min-width:100%;
+    position:relative;
 }
 
 section {
