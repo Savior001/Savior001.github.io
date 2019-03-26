@@ -1,5 +1,31 @@
 var section = "";
 
+var tag = document.createElement('script');
+tag.src = "//www.youtube.com/player_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+
+function onYouTubePlayerAPIReady() {
+  // create the global player from the specific iframe (#video)
+  player = new YT.Player('video', {
+    events: {
+      // call this function when player is ready to use
+      'onReady': onPlayerReady
+    }
+  });
+}
+
+function onPlayerReady(event) {
+  // bind events
+  var pauseButton = document.getElementById("flipArrow");
+  pauseButton.addEventListener("click", function() {
+    player.pauseVideo();
+  });
+  
+}
+
 function scrollLock() {
     var tempSection = document.getElementById("body");
     tempSection.classList.toggle("bodyLock");
@@ -92,8 +118,8 @@ $(window).on('beforeunload', function() {
 });
 
 $('#flipArrow').click(function(event) {
-  if(!event.detail || event.detail == 1){//activate on first click only to avoid hiding again on multiple clicks
-    flipToFront(); // It will execute only once on multiple clicks
+  if(!event.detail || event.detail == 1) {
+    flipToFront();
   }
 });
 
