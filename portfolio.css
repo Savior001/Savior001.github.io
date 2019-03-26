@@ -1,3 +1,19 @@
+a:link {color: #1AC13B;
+	background-color: transparent;
+    text-decoration: none;}
+	
+a:visited {color: #1AC13B;
+		background-color: transparent;
+		text-decoration: none;}
+		
+a:hover {color: #C262DF;
+		background-color: transparent;
+		text-decoration: none;}
+		
+a:active {color: #4b56f0;
+		background-color: transparent;
+		text-decoration: underline;}
+
 body {
     background-color:#f5f5f5;
     font-family:'Garamond','EB Garamond',
@@ -248,12 +264,8 @@ button {
 
 #flipArrow {
     position:absolute;
-    top:1.29vw;
-    left:-0.07vw;
-    margin-left:72%;
-    width:auto;
-    min-width:1.6vw;
-    height:1.6vw;
+    top:1.45vw;
+    left:71vw;
     opacity:0.8;
 }
 
@@ -266,16 +278,4 @@ button {
         'Hoefler Text', 'Times New Roman',
         'serif';
     font-weight: bold;
-}
-
-#square {
-    position:absolute;
-    top:1.29vw;
-    left:-0.07vw;
-    margin-left:72%;
-    width:auto;
-    min-width:1.6vw;
-    height:1.6vw;
-    background:#8245E0;
-    opacity:0;
 }
