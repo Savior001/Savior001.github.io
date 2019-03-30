@@ -202,7 +202,7 @@ button {
 }
 
 .widthLock {
-    width:80%;
+    max-width:80%;
 }
 
 #undA {
