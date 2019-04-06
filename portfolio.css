@@ -241,18 +241,6 @@ button {
     transition:0.3s;
 }
 
-#undA:hover {
-    width:5.28vw;
-}
-
-#undW:hover {
-    width:4.5vw;
-}
-
-#undC:hover {
-    width:7.31vw;
-}
-
 #flipArrow {
     position:absolute;
     top:1.45vw;
