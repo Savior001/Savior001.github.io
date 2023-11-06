@@ -205,6 +205,10 @@ button {
     max-width:80%;
 }
 
+.shapebutton {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
 #undA {
     position:absolute;
     top:44vw;
