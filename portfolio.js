@@ -156,9 +156,4 @@ $(document).ready(function() {
     });
 });
 
-$(".flipAbout").on("click", function(e){
-    e.preventDefault();
-    flipToBack("undA");
-});
-
 $('map').imageMapResize();
