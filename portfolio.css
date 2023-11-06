@@ -207,12 +207,12 @@ button {
 
 #undA {
     position:absolute;
-    top:24.1vw;
-    left:-14.5vw;
+    top:44vw;
+    left:-28vw;
     margin-left:50%;
-    width:0;
-    height:0.04vw;
-    background:black;
+    width:4vw;
+    height:10vw;
+    background:none;
     -webkit-transition:0.3s;
     transition:0.3s;
 }
