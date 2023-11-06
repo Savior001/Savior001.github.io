@@ -127,8 +127,33 @@ $(document).ready(function() {
     $("#bgColor").one("mouseover", function() {
         $("#bgColor body").addClass('bgColorWhite');
     });
-    
-    $(".contactForm").validate();
+
+    $(".contactForm").validate({
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },
+            name: {
+                required: true
+            },
+            message: {
+                required: true
+            }
+        },
+        messages: {
+            email: {
+                required: "Please enter your email address.",
+                email: "Please enter a valid email address."
+            },
+            name: {
+                required: "Please enter your name."
+            },
+            message: {
+                required: "Please enter your message."
+            }
+        }
+    });
 });
 
 $('map').imageMapResize();
