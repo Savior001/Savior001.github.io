@@ -47,17 +47,17 @@ function flipToBack(id) {
     setTimeout(scaleCard, 500)
     setTimeout(bodyColorW, 1050)
     
-    if (id == "undA") {
+    if (id == "aboutSection") {
         section = document.getElementById("about");
         section.classList.toggle("sectionIn");
         section = document.getElementById("body");
         section.classList.toggle("bodyUnlock");
-    } else if (id == "undW") {
+    } else if (id == "workSection") {
         section = document.getElementById("work");
         section.classList.toggle("sectionIn");
         section = document.getElementById("body");
         section.classList.toggle("bodyUnlock");
-    } else if (id == "undC") {
+    } else if (id == "contactSection") {
         section = document.getElementById("contact");
         section.classList.toggle("sectionIn");
     }
@@ -66,21 +66,21 @@ function flipToBack(id) {
 }
 
 function flipToFront() {
-    if (section == "undA") {
+    if (section == "aboutSection") {
         section = document.getElementById("about");
         section.classList.toggle("sectionOut");
         section.classList.remove("sectionIn");
         section.classList.remove("sectionOut");
         section = document.getElementById("body");
         section.classList.remove("bodyUnlock");
-    } else if (section == "undW") {
+    } else if (section == "workSection") {
         section = document.getElementById("work");
         section.classList.toggle("sectionOut");
         section.classList.remove("sectionIn");
         section.classList.remove("sectionOut");
         section = document.getElementById("body");
         section.classList.remove("bodyUnlock");
-    } else if (section == "undC") {
+    } else if (section == "contactSection") {
         section = document.getElementById("contact");
         section.classList.toggle("sectionOut");
         section.classList.remove("sectionIn");
@@ -99,11 +99,11 @@ function scaleCard() {
 }
 
 function bodyColorW() {
-    document.body.style.backgroundColor = 'white';
+    document.body.style.backgrocontactSectionolor = 'white';
 }
 
 function bodyColorG() {
-    document.body.style.backgroundColor = '#f5f5f5';
+    document.body.style.backgrocontactSectionolor = '#f5f5f5';
 }
 
 function flipFace() {
@@ -120,6 +120,16 @@ function flipTo() {
     setTimeout(flipFace, 1050)
     
     section = "";
+}
+
+function open_curtain(section) {
+    $("#lc"+section).animate({width:0},250);
+    $("#rc"+section).animate({width:0},250);
+}
+
+function close_curtain(section) {
+    $("#lc"+section).animate({width:46},250);
+    $("#rc"+section).animate({width:46},250);
 }
 
 $(window).on('beforeunload', function() {
