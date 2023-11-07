@@ -28,6 +28,11 @@ about {
     background-color: #0c5be0;
 }
 
+aboutSection {
+    position: absolute;
+    background-color: black;
+}
+
 section {
     position:relative;
     margin:auto;

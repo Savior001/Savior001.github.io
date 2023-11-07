@@ -7,6 +7,15 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 var player;
 
+$(document).ready(function() {
+    $("#bgColor").one("mouseover", function() {
+        $("#bgColor body").addClass('bgColorWhite');
+    });
+    
+    $('map[name="navmap"]').imageMapResize();
+    $(".contactForm").validate();
+});
+
 function onYouTubePlayerAPIReady() {
   // create the global player from the specific iframe (#video)
   player = new YT.Player('video', {
@@ -123,37 +132,5 @@ $('#flipArrow').click(function(event) {
   }
 });
 
-$(document).ready(function() {
-    $("#bgColor").one("mouseover", function() {
-        $("#bgColor body").addClass('bgColorWhite');
-    });
-
-    $(".contactForm").validate({
-        rules: {
-            email: {
-                required: true,
-                email: true
-            },
-            name: {
-                required: true
-            },
-            message: {
-                required: true
-            }
-        },
-        messages: {
-            email: {
-                required: "Please enter your email address.",
-                email: "Please enter a valid email address."
-            },
-            name: {
-                required: "Please enter your name."
-            },
-            message: {
-                required: "Please enter your message."
-            }
-        }
-    });
-});
-
-$('map').imageMapResize();
+/*<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="salvador_script.js"></script>*/

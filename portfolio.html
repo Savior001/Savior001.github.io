@@ -20,7 +20,7 @@
                     <img src="images/card_front.png" width="50%" alt="BusinessCardFront" class="center shadow" usemap="#navmap"/>
                     <map name="navmap" class="center">
                         <!-- About Button -->
-                        <div id="aboutSection" onclick="flipToBack(this.id)" onmouseenter="open_curtain('about')" onmouseleave="close_curtain('about')">
+                        <div id="aboutSection" class="center" onclick="flipToBack(this.id)" onmouseenter="open_curtain('about')" onmouseleave="close_curtain('about')">
                             <area style="cursor:pointer" shape="rect" coords="1930,3117,2821,3403">
                         </div>
                         <img src="images/curtain.png" id="lcabout" class="leftcurtain">
@@ -45,7 +45,7 @@
                 <!-- Return Button -->
                 <div class="back face">
                     <img src="images/card_back.png" width="50%" alt="BusinessCardBack" class="center shadow" id="scale"/>
-                    <div id="flipArrow"><img style="cursor:pointer" src="images/flip_arrow.png" width="6%" alt="ReturnArrow"/></div>
+                    <div id="flipArrow" onclick="flipToFront()"><img style="cursor:pointer" src="images/flip_arrow.png" width="6%" alt="ReturnArrow"/></div>
                 </div>
             </div>
         </div>
