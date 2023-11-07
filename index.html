@@ -1,71 +1,104 @@
 <!doctype html>
-<script src="jquery-3.3.1.js"></script>
-<script src="jquery.validate.js"></script>
-<script type="text/javascript" src="imageMapResizer.min.js"></script>
-<script src="portfolio.js"></script>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Salvador Lopez Jr.</title>
-    <link rel="stylesheet" type="text/css" href="portfolio.css">
-    <link rel="icon" href="images/favicon2.ico">
-</head>
-<body id="body" onload="scrollLock()">
+    <script src="jquery-3.3.1.js"></script>
+    <script src="jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js" integrity="sha512-sXgF3JImNbesKnmCuR5AE5WPQo6Z8xJMYRvDknGyc0eTWL62pqgEG4Auk9d0VnstzyhRNzPak8AyemFJq7a6/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.js" integrity="sha512-wR8ZLk/8O2Tu993LEOlQTN/J/wKrPgaJ2R2/xkekedTyfCi5+6FbuKhS344c9Ktyapklge9X1TouKob5LCnixQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.map"></script>
+    <script src="portfolio.js"></script>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <title>Salvador Lopez Jr.</title>
+        <link rel="stylesheet" type="text/css" href="portfolio.css">
+        <link rel="icon" href="images/favicon2.ico">
+    </head>
 
-<div class="flipContainer">
-	<div class="flipper" id="flip">
-		<div class="front face">
-            <img src="images/card_front.png" width="630px" alt="BusinessCardFront" class="center shadow" usemap="#navmap"/>
-            <map name="navmap" class="center">
-                <area shape="rect" coords="2337,3504,1446,3248" class="shapebutton">
-                <div id="undA" onclick="flipToBack(this.id)"></div>
-                <div id="undW" onclick="flipToBack(this.id)"><area shape="rect" coords="3128,3241,3910,3512"></div>
-                <div id="undC" onclick="flipToBack(this.id)"><area shape="rect" coords="4585,3233,5771,3504"></div>
-            </map>
+    <body id="body" onload="scrollLock()">
+        <div class="flipContainer">
+            <div class="flipper" id="flip">
+                <div class="front face">
+                    <img src="images/card_front.png" width="50%" alt="BusinessCardFront" class="center shadow" usemap="#navmap"/>
+                    <map name="navmap" class="center">
+                        <!-- About Button -->
+                        <div id="aboutSection" class="center" onclick="flipToBack(this.id)" onmouseenter="open_curtain('about')" onmouseleave="close_curtain('about')">
+                            <area style="cursor:pointer" shape="rect" coords="1930,3117,2821,3403">
+                        </div>
+                        <img src="images/curtain.png" id="lcabout" class="leftcurtain">
+                        <img src="images/curtain.png" id="rcabout" class="rightcurtain">
+
+                        <!-- Work Button -->
+                        <div id="workSection" onclick="flipToBack(this.id)" onmouseenter="open_curtain('work')" onmouseleave="close_curtain('work')">
+                            <area style="cursor:pointer" shape="rect" coords="3186,3109,4069,3396">
+                        </div>
+                        <img src="images/curtain.png" id="lcwork" class="leftcurtain">
+                        <img src="images/curtain.png" id="rcwork" class="rightcurtain">
+
+                        <!-- Contact Button -->
+                        <div id="contactSection" onclick="flipToBack(this.id)" onmouseenter="open_curtain('contact')" onmouseleave="close_curtain('contact')">
+                            <area style="cursor:pointer" shape="rect" coords="4418,3101,5627,3403">
+                        </div>
+                        <img src="images/curtain.png" id="lccontact" class="leftcurtain">
+                        <img src="images/curtain.png" id="rccontact" class="rightcurtain">
+                    </map>
+                </div>
+
+                <!-- Return Button -->
+                <div class="back face">
+                    <img src="images/card_back.png" width="50%" alt="BusinessCardBack" class="center shadow" id="scale"/>
+                    <div id="flipArrow" onclick="flipToFront()"><img style="cursor:pointer" src="images/flip_arrow.png" width="6%" alt="ReturnArrow"/></div>
+                </div>
+            </div>
         </div>
-        <div class="back face">
-            <img src="images/card_back2.png" width="630px" alt="BusinessCardBack" class="center shadow" id="scale"/>
-            <div id="flipArrow" onclick="flipToFront(this.id)"><img style="cursor:pointer" src="images/flip_arrow.png" width="21px" alt="ReturnArrow"/></div>
-        </div>
-    </div>
-</div>
 
-<section id="about" style="top:80px" class="widthLock">
-    <img src="images/polaroid.png" width="316px" alt="Salvador" class="center"/>
-    <p style="text-align:center; line-height:0;">( <i>very stylish!</i> )</p><br>
-    <p>Hello! My name is Salvador and I am a Software Developer. Currently (as of Nov. 6, 2023 @ 10:34 AM, CST) I am mere weeks away from graduating from UTSA with a Bachelor's degree in Computer Science. Throughout my academic career, I have had the opportunity to work with various technologies including, but not limited to, Swift, C++, Java, C#, .NET 5.0, SQL, and more! In my portfolio are a couple of small projects I have worked on for school.</p>
-    <p>At heart, I feel I am a creator. My interests in art and video games led me to the world of programming. Being able to visualize an idea and bringing it forth through code is one of the most rewarding feelings I constantly enjoy. And even though there are constant challenges arising from software development, it is a very satisfying accomplishment to me when overcoming such obstacles.</p>
-</section>
-    
-<section id="work" style="top:-30px">
-    <p style="text-align:center">Below are a couple of projects I have worked on early in my academic career:</p>
-    <h1 style="text-align:center">APPLICATIONS</h1>
-    <iframe class="center" width="822px" height="462px" src="https://www.youtube.com/embed/xlU8yqBfPfc?enablejsapi=1" id="video"></iframe>
-    <p style="text-align:center">Music: <a href="https://www.bensound.com/royalty-free-music/track/erf" target="_blank">www.bensound.com</a></p>
-    
-    <h1 style="text-align:center">WEBSITES</h1>
-    <p style="text-align:center">This is a project website designed for school.</p>
-    <p style="text-align:center"><a href="work/zelda_site/fephome.html" target="_blank">Zelda Project Website</a></p>
+        <!-- About Page -->
+        <section id="about" style="top:80px" class="widthLock">
+            <img src="images/polaroid.png" width="50%" alt="Salvador" class="center"/>
+            <p style="text-align:center; line-height:0;">( <i>very stylish!</i> )</p><br>
+            <p>Hello! My name is Salvador and I am a Software Developer. Currently (as of Nov. 6, 2023 @ 10:34 AM, CST) I am mere weeks away from graduating from UTSA with a Bachelor's degree in Computer Science. Throughout my academic career, I have had the opportunity to work with various technologies including, but not limited to, Swift, C++, Java, C#, .NET 5.0, SQL, and more! In my portfolio are a couple of small projects I have worked on for school.</p>
+            <p>At heart, I feel I am a creator. My interests in art and video games led me to the world of programming. Being able to visualize an idea and bringing it forth through code is one of the most rewarding feelings I constantly enjoy. And even though there are constant challenges arising from software development, it is a very satisfying accomplishment to me when overcoming such obstacles.</p>
+            <!--
+            For more paragraphs:
 
-    <h1 style="text-align:center">DESIGNS</h1>
-    <p style="text-align:center">These are some personal and school projects of my own design.</p>
-    <div style="text-align:center">
-        <img src="work/collage.png" width="900px" alt="designs collage"/>
-    </div>
+            as well as a Graphic and Web Designer
 
-    <p style="text-align:center">More academic projects can be found on my githup page:</p>
-    <p style="text-align:center"><a href="https://github.com/Savior001" target="_blank">Savior001 - Github</a><br><br><br></p>
-</section>
+            On my free time I work on small personal projects that range from creating small apps, designing graphics for websites, apps or for enjoyment and occasionally indulge myself in video games. ( <i>Purely for inspirational purposes!</i> )
 
-<section id="contact" style="top:-130px" class="widthLock">
-    <form class="contactForm" action="mailto:salvalopez95@gmail.com" method="post" enctype="text/plain">
-        <input name="email" type="text" placeholder="Email address">
-        <input name="name" type="text" placeholder="Name">
-        <textarea name="message" cols="30" rows="10" placeholder="Your message"></textarea>
-        <input id="send" type="submit" value="Send"/>
-    </form>
-</section>
-</body>
+            https://www.bensound.com/royalty-free-music/track/erf
+
+            <iframe id="appvideo" class="center" width="65%" src="https://youtu.be/xlU8yqBfPfc"></iframe>
+
+            <div id="appvideo" class="center">
+                <iframe width="65%" src="https://www.youtube.com/watch?v=xlU8yqBfPfc" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+            </div>
+            -->
+        </section>
+        
+        <!-- Work Page -->
+        <section id="work" style="top:-30px">
+            <p style="text-align:center">Below are a couple of projects I have worked on early in my academic career:</p>
+            <h1 style="text-align:center">APPLICATIONS</h1>
+            <iframe class="center" width="65%" height="465%" src="https://www.youtube.com/embed/xlU8yqBfPfc?enablejsapi=1" id="video"></iframe>
+            <p style="text-align:center">Music: <a href="https://www.bensound.com/royalty-free-music/track/erf" target="_blank">www.bensound.com</a></p>
+            
+            <h1 style="text-align:center">WEBSITES</h1>
+            <p style="text-align:center">This is a project website designed for school.</p>
+            <p style="text-align:center"><a href="work/zelda_site/fephome.html" target="_blank">Zelda Project Website</a></p>
+
+            <h1 style="text-align:center">DESIGNS</h1>
+            <p style="text-align:center">These are some personal and school projects of my own design.</p>
+            <div style="text-align:center">
+                <img src="work/collage.png" width="65%" alt="designs collage"/>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" style="top:-130px" class="widthLock">
+            <form id="contactForm" action="mailto:salvalopez95@gmail.com" method="post" enctype="text/plain">
+                <input name="email" type="text" placeholder="Email address">
+                <input name="name" type="text" placeholder="Name">
+                <textarea name="message" cols="30" rows="10" placeholder="Your message"></textarea>
+                <input id="send" type="submit" value="Send"/>
+            </form>
+        </section>
+    </body>
 </html>
