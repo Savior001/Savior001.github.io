@@ -1,0 +1,72 @@
+#home_banner {display:block;
+			text-align:center;
+			width:100%;
+			margin-left:auto;
+			margin-right:auto;}
+
+.centerItems {margin-left:auto;
+			margin-right:auto;}
+			
+h1 {color: #eeeff1;
+	font-family: Times New Roman, 
+	Georgia, Courier New, Arial;}
+
+.h1box {background: rgba(14, 26, 52, 0.9);
+		border-radius: 10px;
+		padding: 10px;
+		text-align: center;
+		margin-left:auto;
+		margin-right:auto;}
+	
+h2 {color: #eeeff1;
+	font-family: Times New Roman, 
+	Georgia, Courier New, Arial;}
+
+.h2box {background: rgba(14, 26, 52, 0.9); 
+		border-radius: 10px; 
+		padding: 10px; 
+		text-align: center; 
+		margin-left:auto; 
+		margin-right:auto;}
+
+body {font-family: Times New Roman, Georgia, 
+	Courier New, Arial;
+	background-position: center top;}
+
+div.video	{text-align: center;} 
+
+div.music	{text-align: center;}
+
+.box {background: rgba(14, 26, 52, 0.9);
+	border-radius: 10px;
+	width: 900px;
+	padding: 10px;
+	text-align: justify;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;}
+	
+.text {color: #eeeff1;
+	font-size: 18pt;}
+
+p {text-indent: 50px;
+	font-family: Times New Roman, 
+	Georgia, Courier New, Arial;
+	margin: 0;
+	margin-top: 0px;}
+	
+a:link {color: #eeeff1;
+	background-color: transparent;
+    text-decoration: none;}
+	
+a:visited {color: #f18dab;
+		background-color: transparent;
+		text-decoration: none;}
+		
+a:hover {color: #58e155;
+		background-color: transparent;
+		text-decoration: underline;}
+		
+a:active {color: #4b56f0;
+		background-color: transparent;
+		text-decoration: underline;}

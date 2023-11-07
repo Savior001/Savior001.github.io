@@ -1,0 +1,326 @@
+a:link {color: #1AC13B;
+	background-color: transparent;
+    text-decoration: none;}
+	
+a:visited {color: #1AC13B;
+		background-color: transparent;
+		text-decoration: none;}
+		
+a:hover {color: #C262DF;
+		background-color: transparent;
+		text-decoration: none;}
+		
+a:active {color: #4b56f0;
+		background-color: transparent;
+		text-decoration: underline;}
+
+body {
+    background-color:#f5f5f5;
+    font-family:'Garamond','EB Garamond',
+        'Baskerville', 'Baskerville Old Face',
+        'Hoefler Text', 'Times New Roman',
+        'serif';
+    font-size:20px;
+    overflow-x:hidden;
+}
+
+about {
+    background-color: #0c5be0;
+}
+
+aboutSection {
+    background-color: #0c5be0;
+}
+
+section {
+    position:relative;
+    margin:auto;
+    height:100px;
+    opacity:0;
+    text-align:justify;
+    line-height:1.4;
+    visibility:hidden;
+}
+
+form {
+    display:block;
+    box-sizing:border-box;
+}
+
+h1 {
+    font-family:'Garamond','EB Garamond',
+        'Baskerville', 'Baskerville Old Face',
+        'Hoefler Text', 'Times New Roman',
+        'serif';
+}
+
+input, textarea {
+    display: block;
+    box-sizing: border-box;
+    background-color: white;
+    color: #000;
+    padding: 10px;
+    font-size: 18px;
+    width: 97%;
+    border: 0;
+    margin: 20px 0;
+}
+
+input[name="email"],
+input[name="name"] {
+    display:inline-block;
+    width:48%;
+    margin-bottom:0px;
+}
+
+textarea {
+    resize:vertical;
+}
+
+button {
+    display:block;
+    cursor:pointer;
+    font-size: 18px;
+    background-color:#8245E0;
+    opacity:0.5;
+    color:white;
+    width:97%;
+    padding:10px;
+    border:0;
+    font-family:'Garamond', 'EB Garamond',
+        'Baskerville', 'Baskerville Old Face',
+        'Hoefler Text', 'Times New Roman',
+        'serif';
+    font-weight: bold;
+}
+
+.bodyLock {
+    overflow-y:hidden;
+}
+
+.bodyUnlock {
+    overflow-y:scroll;
+}
+
+.center {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.cardScale {
+    transition:all 0.5s;
+    transform:scale(7);
+}
+
+.cardHide {
+    transition:all 1s;
+    visibility:hidden;
+}
+
+.cardReScale {
+    transition:all 1s;
+    transform:scale(1);
+}
+
+.cardShow {
+    visibility:visible;
+}
+
+.flipContainer {
+    position:relative;
+    margin:auto;
+    width:100%;
+    height:100%;
+    min-width:400px;
+    z-index:1;
+    float:left;
+}
+
+.flipContainer {
+    -webkit-perspective:-1000;
+    perspective:-1000;
+}
+
+.flipped {
+    -webkit-transform:rotateY(-180deg);
+    transform:rotateY(-180deg);
+}
+
+.flipper {
+    width:100%;
+    height:100%;
+     -webkit-transition:all 0.3s linear;
+    transition:all 0.3s linear;
+    -webkit-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+}
+
+.face {
+    position: absolute;
+    width:100%;
+    height:100%;
+}
+
+.front, .back{
+    top:64px;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+}
+
+.front {
+    z-index:2;
+}
+
+.back {
+    -webkit-transform:rotateY(-180deg);
+    transform:rotateY(-180deg);
+}
+
+.leftcurtain {
+    position:absolute;
+    width:8vw;
+    height:0.3vw;
+}
+
+.rightcurtain {
+    position:absolute;
+    width:8vw;
+    height:0.3vw;
+}
+
+.shadow {
+    -webkit-filter: drop-shadow( -5px -5px 5px #D3D3D3 ); 
+    filter: drop-shadow( 5px 5px 5px #D3D3D3 );  
+}
+
+.sectionIn {
+    opacity:1;
+    visibility:visible;
+    transition:0.5s;
+    transition-delay:1.6s;
+}
+
+.sectionOut {
+    opacity:0;
+    visibility:hidden;
+    transition:0.15s;
+}
+
+.widthLock {
+    width:50%;
+}
+
+#underlineAbout {
+    position:absolute;
+    top:25vw;
+    left:36.6vw;
+    width:8vw;
+    height:0.2vw;
+    -webkit-transition:0.3s;
+    transition:0.3s;
+}
+
+#lcabout {
+    top:24vw;
+    left:36.6vw;
+    width:4vw;
+}
+
+#rcabout {
+    top:24vw;
+    right:54.1vw;
+    width:4vw;
+}
+
+#underlineWork {
+    position:absolute;
+    top:25vw;
+    left:45.5vw;
+    width:8vw;
+    height:0.2vw;
+    -webkit-transition:0.3s;
+    transition:0.3s;
+}
+
+#lcwork {
+    top:24vw;
+    left:45.5vw;
+    width:4vw;
+}
+
+#rcwork {
+    top:24vw;
+    right:45.12vw;
+    width:4vw;
+}
+
+#underlineContact {
+    position:absolute;
+    top:25vw;
+    left:54.9vw;
+    width:8vw;
+    height:0.2vw;
+    -webkit-transition:0.3s;
+    transition:0.3s;
+}
+
+#lccontact {
+    top:24vw;
+    left:54.9vw;
+    width:4vw;
+}
+
+#rccontact {
+    top:24vw;
+    right:35.7vw;
+    width:4vw;
+}
+
+#test {
+    position:absolute;
+    top:24.1vw;
+    left:-14.5vw;
+    margin-left:50%;
+    width:0;
+    height:0.04vw;
+    background:red;
+    -webkit-transition:0.3s;
+    transition:0.3s;
+}
+
+#flipArrow {
+    position:absolute;
+    top:2vw;
+    left:70vw;
+    opacity:0.8;
+}
+
+#send {
+    background-color:#8245E0;
+    opacity:0.5;
+    color:white;
+    font-family:'Garamond', 'EB Garamond',
+        'Baskerville', 'Baskerville Old Face',
+        'Hoefler Text', 'Times New Roman',
+        'serif';
+    font-weight: bold;
+}
+
+#square {
+    position:absolute;
+    top:-5vw;
+    left:-5vw;
+    width:10.6vw;
+    height:10.6vw;
+    color: red;
+}
+
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+@-ms-viewport {
+  width: device-width ;
+}
